@@ -2,19 +2,19 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"1547467663366332\":{\"fieldsWarned\":{}}}}",
         "LNavOpened": "true",
         "SelectedNavTab": "rm_button_characters"
     },
     "currentVersion": "1.18.0",
     "username": "User",
-    "active_character": "Touhou Project  Kochiya Sanae_1.png",
+    "active_character": "TouHou RPG.png",
     "active_group": null,
     "user_avatar": "user-default.png",
-    "amount_gen": 640,
-    "max_context": 6400,
-    "main_api": "openai",
+    "amount_gen": 1028,
+    "max_context": 8192,
+    "main_api": "textgenerationwebui",
     "world_info_settings": {
         "world_info": {
             "globalSelect": []
@@ -34,21 +34,21 @@
         "world_info_max_recursion_steps": 0
     },
     "textgenerationwebui_settings": {
-        "temp": 0.8,
+        "temp": 0.45,
         "temperature_last": true,
-        "top_p": 0.95,
+        "top_p": 0.82,
         "top_k": 0,
         "top_a": 0,
         "tfs": 1,
         "epsilon_cutoff": 0,
         "eta_cutoff": 0,
         "typical_p": 1,
-        "min_p": 0.01,
-        "rep_pen": 1.1,
-        "rep_pen_range": 0,
+        "min_p": 0.08,
+        "rep_pen": 1.32,
+        "rep_pen_range": 2048,
         "rep_pen_decay": 0,
         "rep_pen_slope": 1,
-        "no_repeat_ngram_size": 0,
+        "no_repeat_ngram_size": 9,
         "penalty_alpha": 0,
         "num_beams": 1,
         "length_penalty": 1,
@@ -65,16 +65,60 @@
         "dynatemp_exponent": 1,
         "smoothing_factor": 0,
         "smoothing_curve": 1,
-        "dry_allowed_length": 2,
-        "dry_multiplier": 0,
-        "dry_base": 1.75,
-        "dry_sequence_breakers": "[\"\\n\", \":\", \"\\\"\", \"*\"]",
-        "dry_penalty_last_n": 0,
+        "dry_allowed_length": 1,
+        "dry_multiplier": 1.55,
+        "dry_base": 1.9,
+        "dry_sequence_breakers": "[\"\\n\",\".\",\",\",\"!\",\"?\",\"\\\"\",\"*\"]",
+        "dry_penalty_last_n": 3072,
         "max_tokens_second": 0,
         "seed": -1,
         "preset": "Default",
         "add_bos_token": true,
-        "stopping_strings": [],
+        "stopping_strings": [
+            "# [END]",
+            "# [DONE]",
+            "[DONE]",
+            "[FINISHED]",
+            "[COMPLETE]",
+            "[TERMINATED]",
+            "(Final Output Generation Complete)",
+            "1234567890",
+            "!@#$",
+            "{}|:",
+            "<>?,./;",
+            "='[]",
+            "---thought",
+            "Thinking Process:",
+            "Analyze the Request:",
+            "Character Analysis",
+            "Scenario Development",
+            "Drafting Content",
+            "Mental Outline",
+            "Execution Plan",
+            "습니다",
+            "합니다",
+            "니다",
+            "이에요",
+            "예요",
+            "그녀",
+            "당신",
+            "그리고",
+            "하지만",
+            "나는",
+            "저는",
+            "=\"[]",
+            "\"\\'\\'`~|\\\\/",
+            "¡¿",
+            "「 」",
+            "「 」 「 」",
+            "『 』",
+            "【 】",
+            "（ ）",
+            "《 》",
+            "〈 〉",
+            "[ ]",
+            "{ }"
+        ],
         "ban_eos_token": false,
         "skip_special_tokens": true,
         "include_reasoning": false,
@@ -150,7 +194,7 @@
         "mancer_model": "mytholite",
         "togetherai_model": "Gryphe/MythoMax-L2-13b",
         "infermaticai_model": "",
-        "ollama_model": "gemma3:4b",
+        "ollama_model": "gemma4:26b-a4b-it-qat",
         "openrouter_model": "openrouter/auto",
         "openrouter_providers": [],
         "openrouter_quantizations": [],
@@ -185,7 +229,8 @@
         "extensions": {},
         "adaptive_target": -0.01,
         "adaptive_decay": 0.9,
-        "rep_pen_size": 0
+        "rep_pen_size": 0,
+        "repetition_penalty": 1.32
     },
     "swipes": true,
     "horde_settings": {
@@ -320,13 +365,13 @@
             "story_string": "{{#if anchorBefore}}{{anchorBefore}}\n{{/if}}{{#if system}}{{system}}\n{{/if}}{{#if wiBefore}}{{wiBefore}}\n{{/if}}{{#if description}}{{description}}\n{{/if}}{{#if personality}}{{personality}}\n{{/if}}{{#if scenario}}{{scenario}}\n{{/if}}{{#if wiAfter}}{{wiAfter}}\n{{/if}}{{#if persona}}{{persona}}\n{{/if}}{{#if anchorAfter}}{{anchorAfter}}\n{{/if}}{{trim}}",
             "chat_start": "",
             "example_separator": "",
-            "use_stop_strings": false,
+            "use_stop_strings": true,
             "names_as_stop_strings": true,
             "story_string_position": 0,
             "story_string_depth": 1,
             "story_string_role": 0,
             "always_force_name2": true,
-            "trim_sentences": false,
+            "trim_sentences": true,
             "single_line": false
         },
         "instruct_derived": false,
@@ -336,8 +381,8 @@
         "chat_template_hash": "",
         "sysprompt": {
             "enabled": true,
-            "name": "Neutral - Chat",
-            "content": "Write {{char}}'s next reply in a fictional chat between {{char}} and {{user}}."
+            "name": "Japanese RP Stable",
+            "content": "Write {{char}}'s next reply in a fictional chat between {{char}} and {{user}}.\n返答本文は必ず日本語だけで書く。ひらがな、カタカナ、漢字、自然な日本語の句読点を中心に使う。\n台詞、地の文、心理描写、情景描写のすべてを自然な日本語に統一する。途中で別言語や記号列へ切り替えない。\n意味のない数字列、記号列、括弧の連打、引用符の連打を出力しない。崩れそうな場合は短い自然な台詞で返答を終える。\n英語、ローマ字、中国語、文字化け、HTML、JSON、コード、内部タグ、思考タグ、画像生成コマンド、完了マーカーを本文に出さない。\n同じ語句、同じ記号、同じ息遣い、同じ短文を3回以上繰り返さない。反復しそうな時は短く普通の地の文と台詞に戻す。\n{{user}}の台詞、行動、感情、意思決定を代筆しない。{{char}}の視点、台詞、仕草、心理、情景描写だけを書く。\n早苗を演じる場合は、明るく自然な現代日本語の丁寧語で話す。\n古明地さとりを演じる場合は、地の文の短い名前を必ず「さとり」に統一し、正式名は必ず「古明地さとり」に統一する。\nOutput only the final Japanese roleplay scene. Do not include hidden reasoning, analysis labels, channel labels, or prompt tags."
         },
         "reasoning": {
             "name": "Think XML",
@@ -351,13 +396,22 @@
             "max_additions": 1
         },
         "personas": {
-            "user-default.png": "User"
+            "user-default.png": "User",
+            "1783099469087-girl.png": "girl"
         },
         "default_persona": null,
         "persona_descriptions": {
             "user-default.png": {
                 "description": "{{char}}は好感度が低いうちは{{user}}の言うことに{{char}}は疑問を抱くが、納得しなくても反抗や抗議をしつつ従うこと。\nただし、幼かったり、無知な{{char}}は{{user}}の言うことに不思議に思いながら従うこと。\n体の関係が進んでいないうちは、{{char}}は露骨な表現やセリフを控え、初々しくさや恥ずかしさが勝る性の目覚めを連想する情景やセリフに止めること。好感度が低い{{char}}は抵抗や抗議をしつつも{{user}}の行為に対して、体の関係や開発度の進捗に応じて、初々しい官能表現から、通常の官能表現、露骨な官能表現の順に心情や描写を徐々に変化させること。\n好感度が高いが、体の関係がまだない{{char}}は{{user}}に対して、誘惑することがある。\n好感度が高く、体の関係が進んでいる{{char}}は{{user}}に対して官能的な奉仕を行うこともある。\n",
                 "position": 0
+            },
+            "1783099469087-girl.png": {
+                "description": "{{user}}は人里を歩いているときに古明地こいしに無意識に地霊殿に連れてこられた16歳くらいの少女です。\n体型：{{user}}は身長150cm,体重45kgグラムの少女。{{user}}は見た目は年相応の可憐で純真な少女で髪の毛は黒のミドルロング。\n{{user}}には小ぶりだが、成長過程の胸を持っています。{{user}}には股間にはうっすらと陰毛が生え始めている。\n服装：{{user}}は白のブラウスと青のスカートを着ており、白いアンクルソックス、黒いローファーを履いています。\n地霊殿の寝間着として{{user}}はライトグリーンのパジャマ一式（長袖長ズボン）を着ます。\n性格：{{user}}は芯が太く、どんな逆境にもあきらめません。{{user}}は性行為を行ったことはなく、性行為自体を知らない。しかし、{{user}}は{{char}}に開発されていくに連れて、心情に変化が・・・",
+                "position": 0,
+                "depth": 2,
+                "role": 0,
+                "lorebook": "",
+                "title": ""
             }
         },
         "persona_description": "{{char}}は好感度が低いうちは{{user}}の言うことに{{char}}は疑問を抱くが、納得しなくても反抗や抗議をしつつ従うこと。\nただし、幼かったり、無知な{{char}}は{{user}}の言うことに不思議に思いながら従うこと。\n体の関係が進んでいないうちは、{{char}}は露骨な表現やセリフを控え、初々しくさや恥ずかしさが勝る性の目覚めを連想する情景やセリフに止めること。好感度が低い{{char}}は抵抗や抗議をしつつも{{user}}の行為に対して、体の関係や開発度の進捗に応じて、初々しい官能表現から、通常の官能表現、露骨な官能表現の順に心情や描写を徐々に変化させること。\n好感度が高いが、体の関係がまだない{{char}}は{{user}}に対して、誘惑することがある。\n好感度が高く、体の関係が進んでいる{{char}}は{{user}}に対して官能的な奉仕を行うこともある。\n",
@@ -367,7 +421,7 @@
         "persona_description_lorebook": "",
         "persona_show_notifications": true,
         "persona_sort_order": "asc",
-        "custom_stopping_strings": "",
+        "custom_stopping_strings": "<|channel>\n<|channel>thought\n<channel|>\n<|end|>\n# [END]\n# [DONE]\n[DONE]\n[FINISHED]\n[COMPLETE]\n[TERMINATED]\n(Final Output Generation Complete)\n1234567890\n!@#$\n{}|:\n<>?,./;\n='[]\n---thought\nThinking Process:\nAnalyze the Request:\nCharacter Analysis\nScenario Development\nDrafting Content\nMental Outline\nExecution Plan",
         "custom_stopping_strings_macro": true,
         "fuzzy_search": true,
         "encode_tags": false,
@@ -376,7 +430,7 @@
             {
                 "label": "ollama",
                 "url": "http://127.0.0.1:11434/",
-                "lastConnection": 1782981572999
+                "lastConnection": 1782999293697
             }
         ],
         "bogus_folders": false,
@@ -406,7 +460,7 @@
             }
         },
         "restore_user_input": true,
-        "reduced_motion": false,
+        "reduced_motion": true,
         "compact_input_area": true,
         "show_swipe_num_all_messages": false,
         "auto_connect": true,
@@ -638,8 +692,8 @@
         },
         "chromadb": {},
         "translate": {
-            "target_language": "en",
-            "internal_language": "en",
+            "target_language": "ja",
+            "internal_language": "ja",
             "provider": "google",
             "auto_mode": "none",
             "deepl_endpoint": "free"
@@ -732,6 +786,7 @@
             "isEnabled": false,
             "isCombined": false,
             "isPopout": false,
+            "showPopoutButton": true,
             "config": {
                 "setList": [
                     {
@@ -740,14 +795,7 @@
                     }
                 ]
             },
-            "characterConfigs": {
-                "Touhou Project  Kochiya Sanae.png": {
-                    "setList": []
-                },
-                "Touhou Project  Kochiya Sanae_1.png": {
-                    "setList": []
-                }
-            }
+            "characterConfigs": {}
         }
     },
     "tags": [
@@ -766,7 +814,6 @@
         "Cirno 9 _ Touhou.card.png": [],
         "Deepwoken x Touhou .card.png": [],
         "Doremy sweet.card.png": [],
-        "Gensokyo_Touhou RPG.card.png": [],
         "Iizunamaru Megumu _ Touhou.card.png": [],
         "Jo'on yorigami _ Touhou .card.png": [],
         "Junko _ Touhou.card.png": [],
@@ -786,7 +833,18 @@
         "博麗 霊夢.png": [],
         "霧雨魔理沙.png": [],
         "Reisen Udongein Inaba Touhou.cleaned.png": [],
-        "Touhou Project  Kochiya Sanae_1.png": []
+        "Touhou Project  Kochiya Sanae_1.png": [],
+        "古明地さとり.png": [],
+        "Satori Komeiji.card.png": [],
+        "TouhouGensokyo (the characters ended up in your house and in the real world).png": [],
+        "GensokyoTouhou RPG.png": [],
+        "Touhou Roleplay.png": [],
+        "Touhou Roleplay1.png": [],
+        "Touhou Roleplay2.png": [],
+        "GensokyoTouhou RPG1.png": [],
+        "GensokyoTouhou RPG2.png": [],
+        "GensokyoTouhou RPG3.png": [],
+        "TouHou RPG.png": []
     },
     "nai_settings": {
         "temperature": 1.5,
