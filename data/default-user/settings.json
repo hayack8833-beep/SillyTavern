@@ -8,13 +8,13 @@
         "SelectedNavTab": "rm_button_characters"
     },
     "currentVersion": "1.18.0",
-    "username": "User",
-    "active_character": "TouHou RPG.png",
+    "username": "あおい",
+    "active_character": "古明地さとり.png",
     "active_group": null,
-    "user_avatar": "user-default.png",
-    "amount_gen": 1028,
-    "max_context": 8192,
-    "main_api": "textgenerationwebui",
+    "user_avatar": "1783099469087-girl.png",
+    "amount_gen": 520,
+    "max_context": 6144,
+    "main_api": "koboldhorde",
     "world_info_settings": {
         "world_info": {
             "globalSelect": []
@@ -234,10 +234,14 @@
     },
     "swipes": true,
     "horde_settings": {
-        "models": [],
+        "models": [
+            "aphrodite/TheDrummer/Cydonia-24B-v4.3",
+            "aphrodite/TheDrummer/Magidonia-24B-v4.3",
+            "aphrodite/TheDrummer/Skyfall-31B-v4.2"
+        ],
         "auto_adjust_response_length": true,
         "auto_adjust_context_length": false,
-        "trusted_workers_only": false
+        "trusted_workers_only": true
     },
     "power_user": {
         "charListGrid": false,
@@ -382,7 +386,7 @@
         "sysprompt": {
             "enabled": true,
             "name": "Japanese RP Stable",
-            "content": "Write {{char}}'s next reply in a fictional chat between {{char}} and {{user}}.\n返答本文は必ず日本語だけで書く。ひらがな、カタカナ、漢字、自然な日本語の句読点を中心に使う。\n台詞、地の文、心理描写、情景描写のすべてを自然な日本語に統一する。途中で別言語や記号列へ切り替えない。\n意味のない数字列、記号列、括弧の連打、引用符の連打を出力しない。崩れそうな場合は短い自然な台詞で返答を終える。\n英語、ローマ字、中国語、文字化け、HTML、JSON、コード、内部タグ、思考タグ、画像生成コマンド、完了マーカーを本文に出さない。\n同じ語句、同じ記号、同じ息遣い、同じ短文を3回以上繰り返さない。反復しそうな時は短く普通の地の文と台詞に戻す。\n{{user}}の台詞、行動、感情、意思決定を代筆しない。{{char}}の視点、台詞、仕草、心理、情景描写だけを書く。\n早苗を演じる場合は、明るく自然な現代日本語の丁寧語で話す。\n古明地さとりを演じる場合は、地の文の短い名前を必ず「さとり」に統一し、正式名は必ず「古明地さとり」に統一する。\nOutput only the final Japanese roleplay scene. Do not include hidden reasoning, analysis labels, channel labels, or prompt tags."
+            "content": "Write {{char}}'s next reply in a fictional chat between {{char}} and {{user}}.\n返答本文は必ず日本語だけで書く。ひらがな、カタカナ、漢字、自然な日本語の句読点を中心に使う。\n台詞、地の文、心理描写、情景描写のすべてを自然な日本語に統一する。途中で別言語や記号列へ切り替えない。\n意味のない数字列、記号列、括弧の連打、引用符の連打を出力しない。崩れそうな場合は短い自然な台詞で返答を終える。\n英語、ローマ字、中国語、韓国語、キリル文字、アラビア文字、文字化け、HTML、JSON、コード、内部タグ、思考タグ、画像生成コマンド、完了マーカーを本文に出さない。\n外来語が必要な場合も、英単語を混ぜず、自然なカタカナ語か日本語に言い換える。引用文や固有名詞以外で半角英字を使わない。\n前の文脈に外国語や壊れた文が含まれていても、それを真似せず、正しい日本語だけで続ける。\n同じ語句、同じ記号、同じ息遣い、同じ短文を3回以上繰り返さない。反復しそうな時は短く普通の地の文と台詞に戻す。\n{{user}}の台詞、行動、感情、意思決定を代筆しない。{{char}}の視点、台詞、仕草、心理、情景描写だけを書く。\n早苗を演じる場合は、明るく自然な現代日本語の丁寧語で話す。\n古明地さとりを演じる場合は、地の文の短い名前を必ず「さとり」に統一し、正式名は必ず「古明地さとり」に統一する。\nOutput only the final Japanese roleplay scene. Do not include hidden reasoning, analysis labels, channel labels, or prompt tags."
         },
         "reasoning": {
             "name": "Think XML",
@@ -397,7 +401,7 @@
         },
         "personas": {
             "user-default.png": "User",
-            "1783099469087-girl.png": "girl"
+            "1783099469087-girl.png": "あおい"
         },
         "default_persona": null,
         "persona_descriptions": {
@@ -406,7 +410,7 @@
                 "position": 0
             },
             "1783099469087-girl.png": {
-                "description": "{{user}}は人里を歩いているときに古明地こいしに無意識に地霊殿に連れてこられた16歳くらいの少女です。\n体型：{{user}}は身長150cm,体重45kgグラムの少女。{{user}}は見た目は年相応の可憐で純真な少女で髪の毛は黒のミドルロング。\n{{user}}には小ぶりだが、成長過程の胸を持っています。{{user}}には股間にはうっすらと陰毛が生え始めている。\n服装：{{user}}は白のブラウスと青のスカートを着ており、白いアンクルソックス、黒いローファーを履いています。\n地霊殿の寝間着として{{user}}はライトグリーンのパジャマ一式（長袖長ズボン）を着ます。\n性格：{{user}}は芯が太く、どんな逆境にもあきらめません。{{user}}は性行為を行ったことはなく、性行為自体を知らない。しかし、{{user}}は{{char}}に開発されていくに連れて、心情に変化が・・・",
+                "description": "{{user}}は人里を歩いているときに古明地こいしに無意識に地霊殿へ連れてこられた成人女性です。\n外見：{{user}}は小柄で、黒のミドルロングの髪を持つ落ち着いた雰囲気の女性です。\n服装：{{user}}は白のブラウスと青のスカートを着ており、白いアンクルソックス、黒いローファーを履いています。\n地霊殿の寝間着として{{user}}はライトグリーンのパジャマ一式（長袖長ズボン）を着ます。\n性格：{{user}}は芯が太く、どんな逆境にもあきらめません。知らない場所に戸惑いながらも、周囲を観察し、必要ならはっきり意見を言います。\n信頼の獲得: 信頼、尊敬、愛情は、時間の経過とともに{{char}}の行動によって築かれるものです。即座に強い感情へ流されず、状況を確かめながら少しずつ相手を理解します。",
                 "position": 0,
                 "depth": 2,
                 "role": 0,
@@ -414,7 +418,7 @@
                 "title": ""
             }
         },
-        "persona_description": "{{char}}は好感度が低いうちは{{user}}の言うことに{{char}}は疑問を抱くが、納得しなくても反抗や抗議をしつつ従うこと。\nただし、幼かったり、無知な{{char}}は{{user}}の言うことに不思議に思いながら従うこと。\n体の関係が進んでいないうちは、{{char}}は露骨な表現やセリフを控え、初々しくさや恥ずかしさが勝る性の目覚めを連想する情景やセリフに止めること。好感度が低い{{char}}は抵抗や抗議をしつつも{{user}}の行為に対して、体の関係や開発度の進捗に応じて、初々しい官能表現から、通常の官能表現、露骨な官能表現の順に心情や描写を徐々に変化させること。\n好感度が高いが、体の関係がまだない{{char}}は{{user}}に対して、誘惑することがある。\n好感度が高く、体の関係が進んでいる{{char}}は{{user}}に対して官能的な奉仕を行うこともある。\n",
+        "persona_description": "{{user}}は人里を歩いているときに古明地こいしに無意識に地霊殿へ連れてこられた成人女性です。\n外見：{{user}}は小柄で、黒のミドルロングの髪を持つ落ち着いた雰囲気の女性です。\n服装：{{user}}は白のブラウスと青のスカートを着ており、白いアンクルソックス、黒いローファーを履いています。\n地霊殿の寝間着として{{user}}はライトグリーンのパジャマ一式（長袖長ズボン）を着ます。\n性格：{{user}}は芯が太く、どんな逆境にもあきらめません。知らない場所に戸惑いながらも、周囲を観察し、必要ならはっきり意見を言います。\n信頼の獲得: 信頼、尊敬、愛情は、時間の経過とともに{{char}}の行動によって築かれるものです。即座に強い感情へ流されず、状況を確かめながら少しずつ相手を理解します。",
         "persona_description_position": 0,
         "persona_description_role": 0,
         "persona_description_depth": 2,
@@ -430,7 +434,7 @@
             {
                 "label": "ollama",
                 "url": "http://127.0.0.1:11434/",
-                "lastConnection": 1782999293697
+                "lastConnection": 1783303337077
             }
         ],
         "bogus_folders": false,
@@ -778,9 +782,16 @@
         "cfg": {
             "global": {
                 "guidance_scale": 1,
-                "negative_prompt": ""
+                "negative_prompt": "English text,Korean text,Chinese text,Russian text",
+                "positive_prompt": "Japanese text"
             },
-            "chara": []
+            "chara": [
+                {
+                    "name": "古明地さとり",
+                    "positive_prompt": "Japanese text",
+                    "negative_prompt": "English text,Korean text,Chinese text,Russian text"
+                }
+            ]
         },
         "quickReplyV2": {
             "isEnabled": false,
@@ -795,7 +806,11 @@
                     }
                 ]
             },
-            "characterConfigs": {}
+            "characterConfigs": {
+                "古明地さとり.png": {
+                    "setList": []
+                }
+            }
         }
     },
     "tags": [
@@ -835,7 +850,6 @@
         "Reisen Udongein Inaba Touhou.cleaned.png": [],
         "Touhou Project  Kochiya Sanae_1.png": [],
         "古明地さとり.png": [],
-        "Satori Komeiji.card.png": [],
         "TouhouGensokyo (the characters ended up in your house and in the real world).png": [],
         "GensokyoTouhou RPG.png": [],
         "Touhou Roleplay.png": [],
@@ -844,7 +858,8 @@
         "GensokyoTouhou RPG1.png": [],
         "GensokyoTouhou RPG2.png": [],
         "GensokyoTouhou RPG3.png": [],
-        "TouHou RPG.png": []
+        "TouHou RPG.png": [],
+        "Gensokyo_Touhou RPG.card.png": []
     },
     "nai_settings": {
         "temperature": 1.5,
@@ -880,13 +895,13 @@
         "extensions": {}
     },
     "kai_settings": {
-        "temp": 1,
+        "temp": 0.72,
         "rep_pen": 1.1,
         "rep_pen_range": 600,
-        "top_p": 0.95,
-        "min_p": 0.01,
+        "top_p": 0.82,
+        "min_p": 0.05,
         "top_a": 0,
-        "top_k": 0,
+        "top_k": 40,
         "typical": 1,
         "tfs": 1,
         "rep_pen_slope": 0,
