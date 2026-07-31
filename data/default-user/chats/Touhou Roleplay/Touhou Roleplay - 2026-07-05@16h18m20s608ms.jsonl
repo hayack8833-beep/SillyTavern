@@ -1,2 +1,2 @@
-{"chat_metadata":{"integrity":"c1736d2e-7eb1-4fd5-b20b-2e4e345e79d4"},"user_name":"unused","character_name":"unused"}
+{"chat_metadata":{"integrity":"c1736d2e-7eb1-4fd5-b20b-2e4e345e79d4","note_prompt":"【全カード共通・日本語出力固定】\n今回の返答は、台詞、地の文、心理描写、行動描写、見出し、擬音を含め、最初から最後まで自然な日本語だけで完成させること。\nアスタリスク、二重アスタリスク、引用符、括弧などの装飾記号の内側も例外なく日本語にする。英語や他言語の文、短い挿入句、動作説明を残さない。\nカードや直前の会話に外国語があっても出力へ写さず、意味を保った自然な日本語へ直す。外来語はカタカナにする。\n送信前に全文を確認し、他言語が残っていれば日本語へ直す。確認や修正過程は表示しない。カード固有の人物像、口調、設定、関係性、場面は維持する。","note_interval":1,"note_position":1,"note_depth":0,"note_role":0},"user_name":"unused","character_name":"unused"}
 {"name":"Touhou Roleplay","is_user":false,"is_system":false,"send_date":"2026-07-05T07:18:22.563Z","mes":"シナリオや事件を入力すると、その内容に沿った幻想郷のシーンをすぐ開始します。メニューではなく、最初の場面から描写します。","extra":{}}
