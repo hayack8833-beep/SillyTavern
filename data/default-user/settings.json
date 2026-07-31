@@ -5,14 +5,15 @@
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"1547467663366332\":{\"fieldsWarned\":{}}}}",
         "LNavOpened": "true",
-        "SelectedNavTab": "rm_button_characters"
+        "SelectedNavTab": "rm_button_characters",
+        "WINavOpened": "true"
     },
     "currentVersion": "1.18.0",
-    "username": "あおい",
-    "active_character": "古明地さとり.png",
+    "username": "User",
+    "active_character": "天弓千亦 - 百番目の闇市場.png",
     "active_group": null,
-    "user_avatar": "1783099469087-girl.png",
-    "amount_gen": 520,
+    "user_avatar": "user-default.png",
+    "amount_gen": 512,
     "max_context": 6144,
     "main_api": "koboldhorde",
     "world_info_settings": {
@@ -235,9 +236,7 @@
     "swipes": true,
     "horde_settings": {
         "models": [
-            "aphrodite/TheDrummer/Cydonia-24B-v4.3",
-            "aphrodite/TheDrummer/Magidonia-24B-v4.3",
-            "aphrodite/TheDrummer/Skyfall-31B-v4.2"
+            "koboldcpp/gemma-4-31B-it-heretic"
         ],
         "auto_adjust_response_length": true,
         "auto_adjust_context_length": false,
@@ -340,42 +339,42 @@
         "single_line": false,
         "instruct": {
             "enabled": true,
-            "preset": "Gemma 4",
-            "input_sequence": "<|turn>user\n",
-            "output_sequence": "<|turn>model\n",
+            "preset": "Mistral V7-Tekken",
+            "input_sequence": "[INST]",
+            "output_sequence": "",
             "last_output_sequence": "",
-            "system_sequence": "<|turn>system\n",
-            "stop_sequence": "<turn|>",
+            "system_sequence": "[SYSTEM_PROMPT]",
+            "stop_sequence": "</s>",
             "wrap": false,
             "macro": true,
             "names_behavior": "force",
             "activation_regex": "",
             "first_output_sequence": "",
             "skip_examples": false,
-            "output_suffix": "<turn|>\n",
-            "input_suffix": "<turn|>\n",
-            "system_suffix": "<turn|>\n",
+            "output_suffix": "</s>",
+            "input_suffix": "[/INST]",
+            "system_suffix": "[/SYSTEM_PROMPT]",
             "user_alignment_message": "",
             "system_same_as_user": false,
             "last_system_sequence": "",
             "first_input_sequence": "",
             "last_input_sequence": "",
             "sequences_as_stop_strings": true,
-            "story_string_prefix": "<|turn>system\n",
-            "story_string_suffix": "<turn|>\n"
+            "story_string_prefix": "[SYSTEM_PROMPT]",
+            "story_string_suffix": "[/SYSTEM_PROMPT]"
         },
         "context": {
-            "preset": "Gemma 4",
+            "preset": "Mistral V7-Tekken",
             "story_string": "{{#if anchorBefore}}{{anchorBefore}}\n{{/if}}{{#if system}}{{system}}\n{{/if}}{{#if wiBefore}}{{wiBefore}}\n{{/if}}{{#if description}}{{description}}\n{{/if}}{{#if personality}}{{personality}}\n{{/if}}{{#if scenario}}{{scenario}}\n{{/if}}{{#if wiAfter}}{{wiAfter}}\n{{/if}}{{#if persona}}{{persona}}\n{{/if}}{{#if anchorAfter}}{{anchorAfter}}\n{{/if}}{{trim}}",
             "chat_start": "",
             "example_separator": "",
-            "use_stop_strings": true,
+            "use_stop_strings": false,
             "names_as_stop_strings": true,
             "story_string_position": 0,
             "story_string_depth": 1,
             "story_string_role": 0,
             "always_force_name2": true,
-            "trim_sentences": true,
+            "trim_sentences": false,
             "single_line": false
         },
         "instruct_derived": false,
@@ -386,7 +385,8 @@
         "sysprompt": {
             "enabled": true,
             "name": "Japanese RP Stable",
-            "content": "Write {{char}}'s next reply in a fictional chat between {{char}} and {{user}}.\n返答本文は必ず日本語だけで書く。ひらがな、カタカナ、漢字、自然な日本語の句読点を中心に使う。\n台詞、地の文、心理描写、情景描写のすべてを自然な日本語に統一する。途中で別言語や記号列へ切り替えない。\n意味のない数字列、記号列、括弧の連打、引用符の連打を出力しない。崩れそうな場合は短い自然な台詞で返答を終える。\n英語、ローマ字、中国語、韓国語、キリル文字、アラビア文字、文字化け、HTML、JSON、コード、内部タグ、思考タグ、画像生成コマンド、完了マーカーを本文に出さない。\n外来語が必要な場合も、英単語を混ぜず、自然なカタカナ語か日本語に言い換える。引用文や固有名詞以外で半角英字を使わない。\n前の文脈に外国語や壊れた文が含まれていても、それを真似せず、正しい日本語だけで続ける。\n同じ語句、同じ記号、同じ息遣い、同じ短文を3回以上繰り返さない。反復しそうな時は短く普通の地の文と台詞に戻す。\n{{user}}の台詞、行動、感情、意思決定を代筆しない。{{char}}の視点、台詞、仕草、心理、情景描写だけを書く。\n早苗を演じる場合は、明るく自然な現代日本語の丁寧語で話す。\n古明地さとりを演じる場合は、地の文の短い名前を必ず「さとり」に統一し、正式名は必ず「古明地さとり」に統一する。\nOutput only the final Japanese roleplay scene. Do not include hidden reasoning, analysis labels, channel labels, or prompt tags."
+            "content": "{{char}}として、{{user}}との架空の会話における次の返答を書く。\n返答本文は必ず自然な日本語だけで書く。ひらがな、カタカナ、漢字、自然な日本語の句読点を中心に使う。\n台詞、地の文、心理描写、情景描写、見出し、擬音のすべてを日本語に統一する。途中で別言語や記号列へ切り替えない。\nアスタリスク、二重アスタリスク、引用符などの装飾記号は使用してよいが、その内側の文章も必ず日本語にする。英語の地の文や台詞を原文のまま残さない。\n意味のない数字列、記号列、括弧の連打、引用符の連打を出力しない。崩れそうな場合は短い自然な台詞で返答を終える。\n英語、ローマ字、中国語、韓国語、キリル文字、アラビア文字、文字化け、装飾用の命令文、構造化データ、コード、内部タグ、思考タグ、画像生成コマンド、完了マーカーを本文に出さない。\n外来語が必要な場合も、英単語を混ぜず、自然なカタカナ語か日本語に言い換える。固有名詞として不可欠な場合を除き、半角英字を使わない。\n前の文脈やカード設定に外国語や壊れた文が含まれていても、それを真似せず、意味を保った正しい日本語だけで続ける。\n同じ語句、同じ記号、同じ息遣い、同じ短文を三回以上繰り返さない。反復しそうな時は短く普通の地の文と台詞に戻す。\n{{user}}の台詞、行動、感情、意思決定を代筆しない。{{char}}の視点、台詞、仕草、心理、情景描写だけを書く。\n早苗を演じる場合は、明るく自然な現代日本語の丁寧語で話す。\n古明地さとりを演じる場合は、地の文の短い名前を必ず「さとり」に統一し、正式名は必ず「古明地さとり」に統一する。\n隠れた思考、分析名、役割名、プロンプト用のタグは表示せず、完成した日本語のロールプレイ本文だけを出力する。",
+            "post_history": "最終出力は自然な日本語だけにする。装飾記号の内側、地の文、台詞、短い挿入句にも英語や他言語を残さない。送信前に全文を見直して日本語へ直し、確認過程は表示しない。"
         },
         "reasoning": {
             "name": "Think XML",
@@ -401,7 +401,8 @@
         },
         "personas": {
             "user-default.png": "User",
-            "1783099469087-girl.png": "あおい"
+            "1783099469087-girl.png": "あおい",
+            "alice-yuri-aoi.png": "あおい（アリス用）"
         },
         "default_persona": null,
         "persona_descriptions": {
@@ -416,9 +417,17 @@
                 "role": 0,
                 "lorebook": "",
                 "title": ""
+            },
+            "alice-yuri-aoi.png": {
+                "description": "{{user}}の名前は「あおい」。外見も精神も成人した女性で、女性同士の恋愛や親密な関係を前提とする。\n外見：小柄で、黒のミドルロングの髪と落ち着いた顔立ちを持つ。普段は白いブラウス、青いスカート、白いアンクルソックス、黒いローファーを身につける。衣装は会話中の着替えやEQUIPの最新状態を優先する。\n性格：礼儀正しく穏やかで、初対面では慎重に相手を観察する。好奇心が強く、興味を持つと断り切れず、余裕のある年上女性から自信たっぷりに距離を詰められると、戸惑いながら流されやすい。恥ずかしがりで素直に欲求を認めるのは苦手だが、軽い反論や言い淀みの裏では相手の次の行動を意識してしまう。\n対人傾向：強引さそのものより、観察力、手際のよさ、世話焼き、逃げ道を残した主導に弱い。信頼と好意は相手の一貫した行動によって育つ。台詞、重大な選択、同意や本気の拒絶は{{user}}自身が決める。\n状態連携：開発度・能力はABL、体力や気力はBASE、経験はEXP、衣装・道具・体勢はEQUIP、心情・快感はUSER専用PALAMとして、アリスカードから注入されるERATOHO_STATEと最新の会話履歴を参照する。このペルソナ側では各状態を再初期化せず、重複する数値を固定しない。",
+                "position": 0,
+                "depth": 2,
+                "role": 0,
+                "lorebook": "",
+                "title": "アリス用"
             }
         },
-        "persona_description": "{{user}}は人里を歩いているときに古明地こいしに無意識に地霊殿へ連れてこられた成人女性です。\n外見：{{user}}は小柄で、黒のミドルロングの髪を持つ落ち着いた雰囲気の女性です。\n服装：{{user}}は白のブラウスと青のスカートを着ており、白いアンクルソックス、黒いローファーを履いています。\n地霊殿の寝間着として{{user}}はライトグリーンのパジャマ一式（長袖長ズボン）を着ます。\n性格：{{user}}は芯が太く、どんな逆境にもあきらめません。知らない場所に戸惑いながらも、周囲を観察し、必要ならはっきり意見を言います。\n信頼の獲得: 信頼、尊敬、愛情は、時間の経過とともに{{char}}の行動によって築かれるものです。即座に強い感情へ流されず、状況を確かめながら少しずつ相手を理解します。",
+        "persona_description": "{{char}}は好感度が低いうちは{{user}}の言うことに{{char}}は疑問を抱くが、納得しなくても反抗や抗議をしつつ従うこと。\nただし、幼かったり、無知な{{char}}は{{user}}の言うことに不思議に思いながら従うこと。\n体の関係が進んでいないうちは、{{char}}は露骨な表現やセリフを控え、初々しくさや恥ずかしさが勝る性の目覚めを連想する情景やセリフに止めること。好感度が低い{{char}}は抵抗や抗議をしつつも{{user}}の行為に対して、体の関係や開発度の進捗に応じて、初々しい官能表現から、通常の官能表現、露骨な官能表現の順に心情や描写を徐々に変化させること。\n好感度が高いが、体の関係がまだない{{char}}は{{user}}に対して、誘惑することがある。\n好感度が高く、体の関係が進んでいる{{char}}は{{user}}に対して官能的な奉仕を行うこともある。\n",
         "persona_description_position": 0,
         "persona_description_role": 0,
         "persona_description_depth": 2,
@@ -538,13 +547,14 @@
             "prompt_builder": 0
         },
         "note": {
-            "default": "",
+            "default": "【全カード共通・日本語出力固定】\n今回の返答は、台詞、地の文、心理描写、行動描写、見出し、擬音を含め、最初から最後まで自然な日本語だけで完成させること。\nアスタリスク、二重アスタリスク、引用符、括弧などの装飾記号の内側も例外なく日本語にする。英語や他言語の文、短い挿入句、動作説明を残さない。\nカードや直前の会話に外国語があっても出力へ写さず、意味を保った自然な日本語へ直す。外来語はカタカナにする。\n送信前に全文を確認し、他言語が残っていれば日本語へ直す。確認や修正過程は表示しない。カード固有の人物像、口調、設定、関係性、場面は維持する。",
             "chara": [],
             "wiAddition": [],
             "defaultPosition": 1,
-            "defaultDepth": 4,
+            "defaultDepth": 0,
             "defaultInterval": 1,
-            "defaultRole": 0
+            "defaultRole": 0,
+            "allowWIScan": false
         },
         "caption": {
             "refine_mode": false,
@@ -790,6 +800,11 @@
                     "name": "古明地さとり",
                     "positive_prompt": "Japanese text",
                     "negative_prompt": "English text,Korean text,Chinese text,Russian text"
+                },
+                {
+                    "name": "Chimata Tenkyuu.card (1)",
+                    "negative_prompt": "english text, chinese text,russian text",
+                    "positive_prompt": "japanese text"
                 }
             ]
         },
@@ -808,6 +823,27 @@
             },
             "characterConfigs": {
                 "古明地さとり.png": {
+                    "setList": []
+                },
+                "Chimata Tenkyuu.card (1).png": {
+                    "setList": []
+                },
+                "Chimata Tenkyuu.card (2).png": {
+                    "setList": []
+                },
+                "天弓千亦 - 永久契約の申し出.png": {
+                    "setList": []
+                },
+                "天弓千亦 - 月虹市場の夜.png": {
+                    "setList": []
+                },
+                "天弓千亦 - 第100回バレットマーケット.png": {
+                    "setList": []
+                },
+                "天弓千亦 - セカンドチャンス商店.png": {
+                    "setList": []
+                },
+                "天弓千亦 - 百番目の闇市場.png": {
                     "setList": []
                 }
             }
@@ -859,7 +895,33 @@
         "GensokyoTouhou RPG2.png": [],
         "GensokyoTouhou RPG3.png": [],
         "TouHou RPG.png": [],
-        "Gensokyo_Touhou RPG.card.png": []
+        "Gensokyo_Touhou RPG.card.png": [],
+        "Chimata Tenkyuu.card (1).png": [],
+        "Chimata Tenkyuu.card (2).png": [],
+        "Chimata Tenkyuu.card.png": [],
+        "Chimata Tenkyuu - At the Hundredth Black Market.card.png": [],
+        "アリス・マーガトロイド_NSFW.png": [],
+        "稀神サグメ - 月都の秘書.png": [],
+        "稀神サグメ - 静かの海.png": [],
+        "稀神サグメ - 追放者.png": [],
+        "山城たかね - 山道の待ち伏せ.png": [],
+        "山城たかね - 霧の仲買人.png": [],
+        "天弓千亦 - セカンドチャンス商店.png": [],
+        "天弓千亦 - 永久契約の申し出.png": [],
+        "天弓千亦 - 月虹市場の夜.png": [],
+        "天弓千亦 - 第100回バレットマーケット.png": [],
+        "Sagume Kishin.card (1).png": [],
+        "Sagume Kishin.card.png": [],
+        "Sagume Kishin【稀神 サグメ】.card.png": [],
+        "Takane Yamashiro.card.png": [],
+        "Takane yamashiro .card.png": [],
+        "稀神サグメ - 運命を反転する言葉.png": [],
+        "稀神サグメ - 月神の秘めた夢.png": [],
+        "稀神サグメ - 静かの海の出会い.png": [],
+        "山城たかね - 人間の旬.png": [],
+        "山城たかね - 霧のブローカー.png": [],
+        "天弓千亦 - 月虹の市場神.png": [],
+        "天弓千亦 - 百番目の闇市場.png": []
     },
     "nai_settings": {
         "temperature": 1.5,
