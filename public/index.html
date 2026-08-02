@@ -1624,6 +1624,11 @@
                                                 <input type="checkbox" id="include_reasoning_textgenerationwebui" />
                                                 <small data-i18n="Request Model Reasoning">Request Model Reasoning</small>
                                             </label>
+                                            <label data-tg-type="ollama" data-tg-samplers="ollama_thinking" class="checkbox_label flexGrow flexShrink" for="ollama_thinking_textgenerationwebui">
+                                                <input type="checkbox" id="ollama_thinking_textgenerationwebui" />
+                                                <small data-i18n="Enable Ollama Thinking">Enable Ollama Thinking</small>
+                                                <div class="fa-solid fa-circle-info opacity50p" data-i18n="[title]Enable_Ollama_Thinking_desc" title="Send think: true to Ollama when enabled, or think: false when disabled. Only supported by thinking-capable models."></div>
+                                            </label>
                                             <label data-tg-type="ooba, aphrodite, tabby" data-tg-samplers="temperature_last" class="checkbox_label  flexGrow flexShrink" for="temperature_last_textgenerationwebui">
                                                 <input type="checkbox" id="temperature_last_textgenerationwebui" />
                                                 <small data-i18n="Temperature Last">Temperature Last</small>

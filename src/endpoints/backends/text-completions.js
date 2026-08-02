@@ -392,6 +392,7 @@ router.post('/generate', async function (request, response) {
                 model: request.body.model,
                 prompt: request.body.prompt,
                 stream: request.body.stream ?? false,
+                think: request.body.ollama_thinking === true,
                 keep_alive: keepAlive,
                 raw: true,
                 options: _.pickBy(request.body, (_, key) => OLLAMA_KEYS.includes(key)),

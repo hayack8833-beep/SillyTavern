@@ -332,6 +332,8 @@
     "Example: http://127.0.0.1:8080": "例: http://127.0.0.1:8080",
     "Example: http://127.0.0.1:11434": "例: http://127.0.0.1:11434",
     "Ollama Model": "Ollamaモデル",
+    "Enable Ollama Thinking": "Ollamaの思考を有効化",
+    "Enable_Ollama_Thinking_desc": "有効時はOllamaへthink: true、無効時はthink: falseを送信します。思考対応モデルでのみ使用できます。",
     "Download": "ダウンロード",
     "Tabby API key": "TabbyのAPIキー",
     "koboldcpp API key (optional)": "koboldcpp API キー (オプション)",
