@@ -10,16 +10,17 @@
         "CharacterList_TagFilterState_GROUP": "UNDEFINED",
         "CharacterList_TagFilterState_FAV": "UNDEFINED",
         "CharacterList_TagFilterState_FOLDER": "UNDEFINED",
-        "NavLockOn": "false"
+        "NavLockOn": "false",
+        "AlertWI_東方RPG - 幻想郷新世界.png": "true"
     },
     "currentVersion": "1.18.0",
     "username": "User",
-    "active_character": "東方RPG - 幻想郷新世界.png",
+    "active_character": "依神女苑 - 豪奢と破産の女神.png",
     "active_group": null,
     "user_avatar": "user-default.png",
-    "amount_gen": 1000,
-    "max_context": 49152,
-    "main_api": "textgenerationwebui",
+    "amount_gen": 512,
+    "max_context": 11776,
+    "main_api": "koboldhorde",
     "world_info_settings": {
         "world_info": {
             "globalSelect": [
@@ -202,7 +203,7 @@
         "mancer_model": "mytholite",
         "togetherai_model": "Gryphe/MythoMax-L2-13b",
         "infermaticai_model": "",
-        "ollama_model": "gemma4:26b-a4b-it-qat",
+        "ollama_model": "gemma4:e4b-mlx",
         "openrouter_model": "openrouter/auto",
         "openrouter_providers": [],
         "openrouter_quantizations": [],
@@ -849,50 +850,7 @@
                     }
                 ]
             },
-            "characterConfigs": {
-                "山城たかね - 山道の待ち伏せ.png": {
-                    "setList": []
-                },
-                "山城たかね - 霧のブローカー.png": {
-                    "setList": []
-                },
-                "東方RPG - 幻想郷新世界.png": {
-                    "setList": []
-                },
-                "天弓千亦 - 百番目の闇市場.png": {
-                    "setList": []
-                },
-                "古明地こいし - 地霊殿の夜更かし.png": {
-                    "setList": []
-                },
-                "古明地さとり - 地霊殿への侵入者.png": {
-                    "setList": []
-                },
-                "古明地さとり - 地上の読心探偵.png": {
-                    "setList": []
-                },
-                "本居小鈴 - 鈴奈庵の貸本案内.png": {
-                    "setList": []
-                },
-                "本居小鈴 - 阿求との残り時間.png": {
-                    "setList": []
-                },
-                "本居小鈴 - 囁く妖魔本.png": {
-                    "setList": []
-                },
-                "赤蛮奇 - 人里の静かな夜.png": {
-                    "setList": []
-                },
-                "依神姉妹 - 今夜の荒稼ぎ.png": {
-                    "setList": []
-                },
-                "河城にとり - 光学迷彩の試験.png": {
-                    "setList": []
-                },
-                "天弓千亦 - 月虹の市場神.png": {
-                    "setList": []
-                }
-            }
+            "characterConfigs": {}
         }
     },
     "tags": [
@@ -991,7 +949,28 @@
         "比那名居天子 - 退屈な天人の誘い.png": [],
         "本居小鈴 - 阿求との残り時間.png": [],
         "本居小鈴 - 鈴奈庵の貸本案内.png": [],
-        "本居小鈴 - 囁く妖魔本.png": []
+        "本居小鈴 - 囁く妖魔本.png": [],
+        "ドレミー・スイート - 夢の同居人.png": [],
+        "ドレミー・スイート - 夢日記の観察者.png": [],
+        "ナズーリン - 小さなダウザー将軍.png": [],
+        "プリズムリバー三姉妹 - 演奏会のあとで.png": [],
+        "ルナチャイルド - 音を消す悪戯妖精.png": [],
+        "依神姉妹 - 今夜の荒稼ぎ.png": [],
+        "依神女苑 - 太陽の演奏会.png": [],
+        "河城にとり - 河童工房の試作品.png": [],
+        "稀神サグメ - 運命を反転する言葉.png": [],
+        "稀神サグメ - 月神の秘めた夢.png": [],
+        "稀神サグメ - 静かの海の出会い.png": [],
+        "山城たかね - 霧のブローカー.png": [],
+        "秋姉妹 - 信仰をめぐる秋.png": [],
+        "十六夜咲夜 - 紅魔館の来訪者.png": [],
+        "秦こころ - 人里での出会い.png": [],
+        "秦こころ - 無表情で感情豊かな面霊気.png": [],
+        "東風谷早苗 - 守矢神社の新たな信者.png": [],
+        "封獣ぬえ - 月夜の正体不明.png": [],
+        "封獣ぬえ - 人間いじりの遊び相手.png": [],
+        "蓬莱山輝夜 - 永遠の月の恋人.png": [],
+        "蓬莱山輝夜 - 迷い竹林の恋心.png": []
     },
     "nai_settings": {
         "temperature": 1.5,
